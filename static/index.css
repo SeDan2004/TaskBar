@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     background-color: whitesmoke;
 }
 
@@ -12,6 +13,7 @@ main {
     width: 96%;
     height: 98%;
     margin: 0 auto;
+    overflow-y: hidden;
     border-radius: 5px;
     box-shadow: 0px 0px 2px;
     background-color: white;
@@ -146,6 +148,31 @@ main {
     margin-left: 5rem;
 }
 
+.task_bar_box_content > div:not(:last-of-type) {
+    border-bottom: 2px solid silver;
+}
+
+.task {
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 1rem 0rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.task div {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.task div:not(:first-of-type) {
+    white-space: nowrap;
+    padding-left: 0.5rem;
+    box-sizing: border-box;
+}
+
 .task_bar_footer {
     padding: 0 4%;
     display: flex;
@@ -155,4 +182,8 @@ main {
 
 .task_bar_footer input {
     margin-left: 1rem;
+}
+
+.task_bar_header, .task_bar_content, .task_bar_footer {
+    display: none;
 }

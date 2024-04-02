@@ -8,9 +8,11 @@
         <script
             src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>   
     </head>
     <body>
+        <?php require("./wrapper.php");?>
+        
         <main>
             <div class="task_bar_header">
                 <div class="amount_of_unshipped_goods">
@@ -123,7 +125,9 @@
                             </div>
                         </div>
 
-                        <div class="task_bar_box_content"></div>
+                        <div class="task_bar_box_content">
+                            
+                        </div>
 
                         <div class="task_bar_box_footer"></div>
                     </div>
@@ -136,6 +140,54 @@
                 <input type="button" value="Перенести на:">
                 <input type="date" value=<?php echo date("Y-m-d");?>>
             </div>
+
+            <!--<div class="task_window">
+                <div class="task_window_header">
+                    <div class="header_information_task">
+                        <p>№ 95732 / Автор: Астахов Павел Владимирович / Создана: 18.01.2024</p>
+                    </div>
+                    
+                    <div class="close_task">
+                        <?php //require("./icons/Закрыть.svg");?>
+                    </div>
+                </div>
+
+                <div class="task_window_content">
+                    <div>
+                        <div>
+                            <p class="task_name">тестовая задача 3</p>
+                            <textarea></textarea>
+                            <p>Текущий статус:</p>
+                            <p class="next_steps">След. шаги:</p>
+                            <textarea></textarea>
+                        </div>
+
+                        <div class="task_comment">
+                            <div class="task_comment_window"></div>
+                            <textarea placeholder="Комментировать..." class="comment_input"></textarea>
+                            <div class="upload_file_and_accept">
+                                <label for="file_upload" class="custom_file_upload">
+                                    <?php //require("./icons/Скрепка.svg");?>
+                                </label>
+
+                                <input id="file_upload" type="file">
+
+                                <div class="upload_win">
+                                    <p>Перетащите сюда файлы для загрузки</p>
+                                </div>
+
+                                <div class="accept_comment">
+                                    <p>Отправить</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                    </div>
+                </div>
+            </div>-->
         </main>    
 
         <script src="/static/index.js"></script>
